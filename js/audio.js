@@ -16,16 +16,22 @@ export function initAudio() {
   applyVolume();
   volume?.addEventListener("input", applyVolume);
 
+  const playAudio = async () => {
+    try {
+      await audio.play();
+    } catch (error) {
+      if (error.name !== "NotAllowedError") unavailable();
+    }
+  };
+
+  playAudio();
+
   button.addEventListener("click", async () => {
     if (button.getAttribute("aria-pressed") === "true") {
       audio.pause();
       return;
     }
-    try {
-      await audio.play();
-    } catch {
-      unavailable();
-    }
+    await playAudio();
   });
 
   audio.addEventListener("play", () => button.setAttribute("aria-pressed", "true"));
