@@ -2,6 +2,11 @@
 # Ver README.md -> "Musica de fondo"
 assets/audio/*.mp3
 
+# Credenciales: la API key real nunca se sube al repositorio.
+# Copia config.example.js como config.local.js y pega tu key ahi.
+js/config.local.js
+.env
+
 # Sistema operativo
 Thumbs.db
 Thumbs.db:encryptable
