@@ -9,6 +9,11 @@
 <meta name="author" content="Fionas Chick">
 <link rel="canonical" href="https://fionaschick.example.com/">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preload" as="image"
+      href="assets/img/hero-720.jpg"
+      imagesrcset="assets/img/hero-720.jpg 720w, assets/img/hero-1100.jpg 1100w"
+      imagesizes="(min-width: 900px) 48vw, 100vw"
+      fetchpriority="high">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
@@ -141,7 +146,7 @@
              srcset="assets/img/hero-720.jpg 720w, assets/img/hero-1100.jpg 1100w"
              sizes="(min-width: 900px) 48vw, 100vw"
              width="720" height="720" alt="Muestra de trabajos realizados en el salon Fionas Chick"
-             fetchpriority="high" decoding="async">
+             loading="eager" fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>
@@ -161,6 +166,7 @@
             <h3 class="card__title">Corte y color</h3>
             <p class="card__text">Corte personalizado, coloracion, decoloracion y tratamiento nutritivo.</p>
             <p class="card__price">Desde $450</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
         <li class="card">
@@ -170,6 +176,7 @@
             <h3 class="card__title">Manicura y unas</h3>
             <p class="card__text">Esmaltado semipermanente, french, kapping y manicura spa.</p>
             <p class="card__price">Desde $280</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
         <li class="card">
@@ -179,6 +186,7 @@
             <h3 class="card__title">Tratamientos faciales</h3>
             <p class="card__text">Limpieza profunda, exfoliacion, hidratacion ytratamiento anti-edad.</p>
             <p class="card__price">Desde $620</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
         <li class="card">
@@ -188,6 +196,7 @@
             <h3 class="card__title">Pestanas</h3>
             <p class="card__text">Extension clasica o voluminous, y laminado para un olhar definido.</p>
             <p class="card__price">Desde $540</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
         <li class="card">
@@ -197,6 +206,7 @@
             <h3 class="card__title">Maquillaje</h3>
             <p class="card__text">Alba de dia, alta gastronomia y peinados para eventos.</p>
             <p class="card__price">Desde $890</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
         <li class="card">
@@ -206,6 +216,7 @@
             <h3 class="card__title">Depilacion</h3>
             <p class="card__text">Laser y luz pulsada con equipo de ultima generacion.</p>
             <p class="card__price">Desde $700</p>
+            <a class="btn btn--primary" href="#reserva">Agendar</a>
           </div>
         </li>
       </ul>
@@ -222,6 +233,7 @@
       <ul class="gallery">
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Corte y coloracion"
                   data-full="assets/img/service-corte-color.webp"
                   data-alt="Corte y coloracion de cabello en el salon Fionas Chick"
                   data-caption="Corte y coloracion">
@@ -231,6 +243,7 @@
         </li>
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Manicura y esmaltado"
                   data-full="assets/img/service-unas.webp"
                   data-alt="Manicura y esmaltado de unas en Fionas Chick"
                   data-caption="Manicura y esmaltado">
@@ -240,6 +253,7 @@
         </li>
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Tratamiento facial"
                   data-full="assets/img/service-faciales.webp"
                   data-alt="Tratamiento facial y cuidado de la piel en el salon"
                   data-caption="Tratamiento facial">
@@ -249,6 +263,7 @@
         </li>
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Extension de pestanas"
                   data-full="assets/img/service-pestanas.webp"
                   data-alt="Extension de pestanas realizada en Fionas Chick"
                   data-caption="Extension de pestanas">
@@ -258,6 +273,7 @@
         </li>
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Maquillaje de alta costura"
                   data-full="assets/img/service-maquillaje.webp"
                   data-alt="Servicio de maquillaje para ocasiones especiales"
                   data-caption="Maquillaje de alta costura">
@@ -267,6 +283,7 @@
         </li>
         <li class="gallery__item">
           <button class="gallery__btn" type="button"
+                  aria-label="Ampliar foto: Depilacion laser"
                   data-full="assets/img/service-depilacion.webp"
                   data-alt="Servicio de depilacion en el salon Fionas Chick"
                   data-caption="Depilacion laser">

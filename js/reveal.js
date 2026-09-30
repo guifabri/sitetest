@@ -9,10 +9,6 @@ function stagger(nodes) {
   nodes.forEach((node, index) => node.style.setProperty("--i", index % 6));
 }
 
-function inViewport(node) {
-  return node.getBoundingClientRect().top < window.innerHeight;
-}
-
 export function initReveal() {
   const targets = [...document.querySelectorAll(SELECTOR)];
   if (!targets.length) return;
@@ -32,7 +28,8 @@ export function initReveal() {
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
     );
     targets.forEach((node) => observer.observe(node));
+    return;
   }
 
-  targets.filter(inViewport).forEach((node) => node.classList.add("is-visible"));
+  targets.forEach((node) => node.classList.add("is-visible"));
 }

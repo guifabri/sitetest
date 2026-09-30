@@ -6,15 +6,6 @@ import { initWeather } from "./weather.js";
 import { initForm } from "./form.js";
 import { initReveal } from "./reveal.js";
 
-async function loadKey() {
-  try {
-    const { OPENWEATHER_API_KEY } = await import("./config.local.js");
-    return OPENWEATHER_API_KEY;
-  } catch {
-    return "";
-  }
-}
-
 document.documentElement.classList.add("js");
 
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -25,4 +16,6 @@ initAccordion();
 initGallery();
 initForm();
 initReveal();
-initWeather(await loadKey());
+import("./config.local.js")
+  .then(({ OPENWEATHER_API_KEY }) => initWeather(OPENWEATHER_API_KEY))
+  .catch(() => initWeather(""));
