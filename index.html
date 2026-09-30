@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fionas Chick | Salon de belleza, corte, color y tratamientos</title>
+<meta name="description" content="Fionas Chick es un salon de belleza: corte y color, unas, tratamientos faciales, pestanas, maquillaje y depilacion. Reserva tu turno hoy.">
+<meta name="theme-color" content="#8e2f4f">
+<meta name="author" content="Fionas Chick">
+<link rel="canonical" href="https://fionaschick.example.com/">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Fionas Chick">
+<meta property="og:title" content="Fionas Chick | Salon de belleza">
+<meta property="og:description" content="Corte, color, unas y tratamientos faciales. Reserva tu turno en Fionas Chick.">
+<meta property="og:image" content="assets/img/hero-1100.jpg">
+<meta property="og:image:alt" content="Interior del salon de belleza Fionas Chick">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Fionas Chick",
+  "description": "Salon de belleza: corte y color, unas, tratamientos faciales, pestanas, maquillaje y depilacion.",
+  "image": "assets/img/hero-1100.jpg",
+  "url": "https://fionaschick.example.com/",
+  "telephone": "+52 55 0000 0000",
+  "priceRange": "$$",
+  "currenciesAccepted": "MXN",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Principal 123",
+    "addressLocality": "Ciudad de Mexico",
+    "addressCountry": "MX"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:00"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="header">
+  <div class="header__inner shell">
+    <a class="brand" href="#inicio">
+      <img class="brand__logo" src="assets/img/logo.jpg" width="320" height="322"
+           alt="" decoding="async">
+      <span class="brand__name">Fionas<span class="brand__name-accent">Chick</span></span>
+    </a>
+
+    <div class="menu" id="menu">
+      <nav class="nav" aria-label="Navegacion principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#galeria">Galeria</a></li>
+          <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="#preguntas">Preguntas</a></li>
+        </ul>
+      </nav>
+      <div class="menu__row">
+        <a class="btn btn--primary" href="#reserva">Reservar turno</a>
+        <label class="volume">
+          <span class="sr-only">Volumen de la musica de fondo</span>
+          <svg class="volume__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 9v6h4l5 4V5L8 9H4z"/>
+            <path d="M16.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <input class="volume__range" id="volume" type="range" min="0" max="100" step="5" value="100">
+        </label>
+      </div>
+    </div>
+
+    <div class="header__bar">
+      <p class="weather" id="weather" aria-live="polite">
+        <span class="weather__icon" id="weather-icon" aria-hidden="true"></span>
+        <span class="weather__temp" id="weather-temp"></span>
+        <span class="weather__desc" id="weather-desc"></span>
+      </p>
+
+      <button class="audio-btn" id="audio-btn" type="button" aria-pressed="false" aria-label="Musica de fondo">
+        <svg class="audio-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path class="audio-btn__horn" d="M4 9v6h4l5 4V5L8 9H4z"/>
+          <path class="audio-btn__off" d="M16 9.5l5 5m0-5l-5 5" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+          <g class="audio-btn__waves" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M15.5 9.2a4 4 0 0 1 0 5.6"/>
+            <path d="M18 6.8a7.5 7.5 0 0 1 0 10.4"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span class="burger__box" aria-hidden="true"><span class="burger__bar"></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero" id="inicio">
+    <div class="hero__inner shell">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Esteticista certificada</p>
+        <h1 class="hero__title">Salon de belleza <span>Fionas Chick</span></h1>
+        <p class="hero__lead">
+          Corte, color, unas y tratamientos faciales en un solo lugar. Tecnica,
+          calma y productos que cuidan tu pelo y tu piel desde la primera visita.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#reserva">Reservar turno</a>
+          <a class="btn btn--ghost btn--lg" href="#servicios">Ver servicios</a>
+        </div>
+        <ul class="hero__facts">
+          <li>10 anos de experiencia</li>
+          <li>Productos de baja dano</li>
+          <li>Horario extendido sabados</li>
+        </ul>
+      </div>
+      <div>
+        <img class="hero__img" src="assets/img/hero-720.jpg"
+             srcset="assets/img/hero-720.jpg 720w, assets/img/hero-1100.jpg 1100w"
+             sizes="(min-width: 900px) 48vw, 100vw"
+             width="720" height="720" alt="Muestra de trabajos realizados en el salon Fionas Chick"
+             fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicios" aria-labelledby="servicios-t">
+    <div class="shell">
+      <header class="section__head">
+        <h2 class="section__title" id="servicios-t">Nuestros servicios</h2>
+        <p class="section__lead">Seis sintomas, un mismo equipo. Todos incluyen consulta inicial sin costo.</p>
+      </header>
+
+      <ul class="cards">
+        <li class="card">
+          <img class="card__img" src="assets/img/service-corte-color.webp" width="612" height="408"
+               alt="Corte y coloracion de cabello en el salon Fionas Chick" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Corte y color</h3>
+            <p class="card__text">Corte personalizado, coloracion, decoloracion y tratamiento nutritivo.</p>
+            <p class="card__price">Desde $450</p>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__img" src="assets/img/service-unas.webp" width="612" height="408"
+               alt="Manicura y esmaltado de unas en Fionas Chick" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Manicura y unas</h3>
+            <p class="card__text">Esmaltado semipermanente, french, kapping y manicura spa.</p>
+            <p class="card__price">Desde $280</p>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__img" src="assets/img/service-faciales.webp" width="612" height="408"
+               alt="Tratamiento facial y cuidado de la piel en el salon" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Tratamientos faciales</h3>
+            <p class="card__text">Limpieza profunda, exfoliacion, hidratacion ytratamiento anti-edad.</p>
+            <p class="card__price">Desde $620</p>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__img" src="assets/img/service-pestanas.webp" width="500" height="333"
+               alt="Extension de pestanas realizada en Fionas Chick" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Pestanas</h3>
+            <p class="card__text">Extension clasica o voluminous, y laminado para un olhar definido.</p>
+            <p class="card__price">Desde $540</p>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__img" src="assets/img/service-maquillaje.webp" width="740" height="740"
+               alt="Servicio de maquillaje para ocasiones especiales" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Maquillaje</h3>
+            <p class="card__text">Alba de dia, alta gastronomia y peinados para eventos.</p>
+            <p class="card__price">Desde $890</p>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__img" src="assets/img/service-depilacion.webp" width="600" height="400"
+               alt="Servicio de depilacion en el salon Fionas Chick" loading="lazy" decoding="async">
+          <div class="card__body">
+            <h3 class="card__title">Depilacion</h3>
+            <p class="card__text">Laser y luz pulsada con equipo de ultima generacion.</p>
+            <p class="card__price">Desde $700</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="galeria" aria-labelledby="galeria-t">
+    <div class="shell">
+      <header class="section__head">
+        <h2 class="section__title" id="galeria-t">Trabajos del salon</h2>
+        <p class="section__lead">Resultados reales de nuestras clientas. Toca cualquier foto para verla completa.</p>
+      </header>
+
+      <ul class="gallery">
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-corte-color.webp"
+                  data-alt="Corte y coloracion de cabello en el salon Fionas Chick"
+                  data-caption="Corte y coloracion">
+            <img class="gallery__img" src="assets/img/service-corte-color.webp" width="612" height="408"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-unas.webp"
+                  data-alt="Manicura y esmaltado de unas en Fionas Chick"
+                  data-caption="Manicura y esmaltado">
+            <img class="gallery__img" src="assets/img/service-unas.webp" width="612" height="408"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-faciales.webp"
+                  data-alt="Tratamiento facial y cuidado de la piel en el salon"
+                  data-caption="Tratamiento facial">
+            <img class="gallery__img" src="assets/img/service-faciales.webp" width="612" height="408"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-pestanas.webp"
+                  data-alt="Extension de pestanas realizada en Fionas Chick"
+                  data-caption="Extension de pestanas">
+            <img class="gallery__img" src="assets/img/service-pestanas.webp" width="500" height="333"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-maquillaje.webp"
+                  data-alt="Servicio de maquillaje para ocasiones especiales"
+                  data-caption="Maquillaje de alta costura">
+            <img class="gallery__img" src="assets/img/service-maquillaje.webp" width="740" height="740"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+        <li class="gallery__item">
+          <button class="gallery__btn" type="button"
+                  data-full="assets/img/service-depilacion.webp"
+                  data-alt="Servicio de depilacion en el salon Fionas Chick"
+                  data-caption="Depilacion laser">
+            <img class="gallery__img" src="assets/img/service-depilacion.webp" width="600" height="400"
+                 alt="" loading="lazy" decoding="async">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="nosotros" aria-labelledby="nosotros-t">
+    <div class="shell split">
+      <div class="split__media">
+        <img class="split__img" src="assets/img/sobre-nosotros.webp" width="740" height="557"
+             alt="Clientas recibiendo servicios de belleza en Fionas Chick" loading="lazy" decoding="async">
+      </div>
+      <div class="split__copy">
+        <h2 class="section__title" id="nosotros-t">Un salon pensado para ti</h2>
+        <p class="split__text">
+          Fionas Chick nacio con una idea simple: que ir al salon sea un rato para ti,
+          no una cita mas. Por eso trabajamos con citas separadas, musica baja y una
+          consulta inicial gratuita en la que te explicamos cada opcion antes de empezar.
+        </p>
+        <ul class="checklist">
+          <li>Consultas gratuitas y sin compromiso</li>
+          <li>Productos profesionales selladores y no siliconados</li>
+          <li>Higiene estricta: esterilizacion entre clientas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="preguntas" aria-labelledby="preguntas-t">
+    <div class="shell shell--narrow">
+      <header class="section__head">
+        <h2 class="section__title" id="preguntas-t">Preguntas frecuentes</h2>
+        <p class="section__lead">Puedes abrir varias respuestas a la vez.</p>
+      </header>
+
+      <div class="acc">
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p1" id="p1-btn">
+              <span>¿Necesito cita previa?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p1" role="region" aria-labelledby="p1-btn">
+            <div class="acc__content">
+              <p>Si. Trabajamos con cita previa para que llegues sin espera. Puedes reservar escribiendonos por el formulario o por WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p2" id="p2-btn">
+              <span>¿Cuánto tiempo duran los servicios?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p2" role="region" aria-labelledby="p2-btn">
+            <div class="acc__content">
+              <p>Un corte va de 45 a 60 minutos, una coloracion de 90 a 120, y los tratamientos faciales de 60 a 75 minutos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p3" id="p3-btn">
+              <span>¿Qué métodos de pago aceptan?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p3" role="region" aria-labelledby="p3-btn">
+            <div class="acc__content">
+              <p>Aceptamos efectivo, tarjeta de debito y credito, y transferencia. Para servicios de mas de $2,000 pedimos el 50% de anticipo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p4" id="p4-btn">
+              <span>¿Puedo regalar un tratamiento?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p4" role="region" aria-labelledby="p4-btn">
+            <div class="acc__content">
+              <p>Si. Emitimos tarjetas de regalo y paquetes de cinco sesiones con quince por ciento de descuento. Tiene validez de seis meses.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p5" id="p5-btn">
+              <span>¿Tienen productos para piel sensible?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p5" role="region" aria-labelledby="p5-btn">
+            <div class="acc__content">
+              <p>Contamos con una linea sin fragancia y sin alcohol. En la consulta revisamos tu tipo de piel y elegimos el producto adecuado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc__item">
+          <h3 class="acc__heading">
+            <button class="acc__trigger" type="button" aria-expanded="false" aria-controls="p6" id="p6-btn">
+              <span>¿Puedo cambiar mi cita?</span>
+              <svg class="acc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </h3>
+          <div class="acc__panel" id="p6" role="region" aria-labelledby="p6-btn">
+            <div class="acc__content">
+              <p>Con doce horas de anticipacion, sin costo. Despues de ese plazo solo podemos ofrecerte el siguiente espacio disponible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reserva" aria-labelledby="reserva-t">
+    <div class="shell split split--reverse">
+      <div class="split__media">
+        <img class="split__img" src="assets/img/duena.webp" width="612" height="408"
+             alt="Fiona, propietaria del salon, recibiendo a una clienta" loading="lazy" decoding="async">
+      </div>
+      <div class="split__copy">
+        <h2 class="section__title" id="reserva-t">Reserva tu turno</h2>
+        <p class="split__text">
+          Dejanos tus datos y te contactamos para confirmar la hora. Los guardamos en
+          tu navegador para no tener que escribirlos otra vez.
+        </p>
+
+        <p class="notice" id="form-notice" hidden></p>
+
+        <form class="form" id="form" novalidate>
+          <div class="field">
+            <label class="field__label" for="nombre">Nombre</label>
+            <input class="field__input" id="nombre" name="nombre" type="text"
+                   autocomplete="name" required aria-describedby="nombre-err">
+            <p class="field__error" id="nombre-err"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="email">Correo electronico</label>
+            <input class="field__input" id="email" name="email" type="email"
+                   autocomplete="email" required aria-describedby="email-err">
+            <p class="field__error" id="email-err"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="telefono">Telefono</label>
+            <input class="field__input" id="telefono" name="telefono" type="tel"
+                   inputmode="tel" autocomplete="tel" required aria-describedby="telefono-err">
+            <p class="field__error" id="telefono-err"></p>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit">Enviar solicitud</button>
+            <button class="btn btn--quiet" type="button" id="clear-data" hidden>Borrar datos guardados</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer__inner">
+    <div class="footer__brand">
+      <img class="footer__logo" src="assets/img/logo.jpg" width="320" height="322" alt="" loading="lazy" decoding="async">
+      <p class="footer__name">Fionas Chick</p>
+      <p class="footer__tag">Salon de belleza</p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__title">Horario</h2>
+      <ul class="footer__list">
+        <li>Lunes a viernes: 9:00 &ndash; 19:00</li>
+        <li>Sabado: 9:00 &ndash; 15:00</li>
+        <li>Domingo: cerrado</li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__title">Contacto</h2>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="tel:+525500000000">+52 55 0000 0000</a></li>
+        <li><a class="footer__link" href="mailto:hola@fionaschick.example.com">hola@fionaschick.example.com</a></li>
+        <li>Avenida Principal 123, Ciudad de Mexico</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer__legal shell">Fionas Chick &copy; <span id="year">2026</span>. Todos los derechos reservados.</p>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Galeria ampliada">
+  <button class="lightbox__close" type="button" aria-label="Cerrar galeria">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+  </figure>
+</dialog>
+
+<audio id="bgm" src="assets/audio/background-music.mp3" preload="none" loop></audio>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

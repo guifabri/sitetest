@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c21870"/>
+      <stop offset="100%" stop-color="#560021"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="50%" stop-color="#e5a93c"/>
+      <stop offset="100%" stop-color="#ffeaa0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Favicon background -->
+  <circle cx="256" cy="256" r="244" fill="url(#bg)" stroke="url(#gold)" stroke-width="14"/>
+
+  <!-- Stylized lotus petals -->
+  <g fill="none" stroke="url(#gold)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M116 214 C155 165 207 165 256 214 C205 229 158 230 116 214Z"/>
+    <path d="M103 278 C145 232 200 231 256 260 C205 286 153 294 103 278Z"/>
+    <path d="M145 351 C169 305 211 286 256 292 C229 334 193 358 145 351Z"/>
+    <path d="M171 126 C203 151 226 180 241 218"/>
+  </g>
+
+  <!-- Hair -->
+  <path d="M267 112
+           C308 139 325 179 317 221
+           C311 253 290 274 282 303
+           C273 336 288 385 313 421"
+        fill="none" stroke="url(#gold)" stroke-width="22" stroke-linecap="round"/>
+
+  <path d="M295 113
+           C331 151 337 196 322 236
+           C310 268 292 284 291 319
+           C290 354 303 388 325 414"
+        fill="none" stroke="url(#gold)" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Female profile -->
+  <path fill="url(#gold)" d="
+    M330 115
+    C357 126 374 151 374 180
+    C374 198 367 211 357 223
+    C366 231 379 239 390 250
+    C395 255 393 261 385 264
+    L371 268
+    C377 273 381 279 378 284
+    C375 289 365 290 357 292
+    C365 299 367 306 363 311
+    C359 316 351 318 342 318
+    C342 337 335 354 325 369
+    C315 384 302 399 292 416
+    L268 416
+    C281 387 283 360 279 335
+    C274 304 273 280 286 252
+    C299 225 315 206 322 184
+    C330 158 324 137 330 115Z"/>
+
+  <!-- Clean hair accent -->
+  <path d="M267 112 C286 138 293 169 286 202"
+        fill="none" stroke="#fff0a8" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,19 @@
+# Audio con copyright: se usa solo en local, no se versiona.
+# Ver README.md -> "Musica de fondo"
+assets/audio/*.mp3
+
+# Sistema operativo
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
