@@ -78,8 +78,7 @@ async function requestWeather({ lat, lon }, key) {
   return {
     temp: json.main.temp,
     code: info.id,
-    isDay: info.icon.endsWith("d"),
-    desc: info.description
+    isDay: info.icon.endsWith("d")
   };
 }
 
@@ -97,7 +96,6 @@ function createChip() {
     chip.root.querySelectorAll("[hidden]").forEach((node) => (node.hidden = false));
     chip.icon.innerHTML = svgFor(data.code, data.isDay);
     chip.temp.textContent = `${Math.round(data.temp)}°C`;
-    chip.desc.textContent = data.desc;
   };
 
   const showPicker = (onPick) => {
@@ -107,7 +105,7 @@ function createChip() {
     const select = document.createElement("select");
     select.className = "weather__fallback";
     select.setAttribute("aria-label", "Elige una ciudad para ver el clima");
-    select.append(new Option("Usar mi ciudad", ""));
+    select.append(new Option("Ciudad", ""));
     CITIES.forEach((c) => select.append(new Option(c.name, `${c.lat},${c.lon}`)));
     select.addEventListener("change", () => {
       const [lat, lon] = select.value.split(",").map(Number);

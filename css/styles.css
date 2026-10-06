@@ -328,9 +328,9 @@
   .weather__icon { display: inline-flex; inline-size: 1.4rem; block-size: 1.4rem; color: var(--accent); }
   .weather__icon svg { inline-size: 100%; block-size: 100%; }
   .weather__temp { font-weight: 700; }
-  .weather__desc { max-inline-size: 8rem; overflow: hidden; text-overflow: ellipsis; color: var(--text-soft); }
-
   .weather__fallback {
+    inline-size: 5rem;
+    min-inline-size: 0;
     max-inline-size: 100%;
     padding: var(--sp-1) var(--sp-2);
     border: 1px solid var(--line);
@@ -378,6 +378,8 @@
   .burger[aria-expanded="true"] .burger__box::after  { transform: translateY(-6px) rotate(-45deg); }
 
   @media (max-width: 899px) {
+    .header__inner { gap: var(--sp-2); }
+
     .menu {
       position: absolute;
       inset: 100% var(--gutter) auto;
@@ -402,10 +404,18 @@
     .menu__row { flex-direction: column; align-items: stretch; }
     .volume { justify-content: space-between; }
     .volume__range { inline-size: 100%; }
-    .burger { display: inline-flex; }
-    .header__bar { margin-inline-start: auto; }
-    .weather__desc { display: none; }
+    .burger { display: inline-flex; margin-inline-start: 0; flex: none; }
+    .header__bar { margin-inline-start: auto; gap: var(--sp-2); }
     .weather { min-inline-size: 4rem; padding-inline: var(--sp-3); }
+  }
+
+  @media (max-width: 360px) {
+    .header__inner { gap: var(--sp-1); }
+    .brand { gap: var(--sp-2); }
+    .brand__logo { inline-size: 2.25rem; block-size: 2.25rem; }
+    .header__bar { gap: var(--sp-1); }
+    .weather { padding-inline: var(--sp-1); }
+    .weather__fallback { inline-size: 4rem; }
   }
 
   @media (min-width: 900px) {
