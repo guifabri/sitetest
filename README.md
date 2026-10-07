@@ -13,18 +13,7 @@ y el clima no funcionan.
 ## API de clima
 
 El sitio usa la Geolocation API del navegador para obtener la ubicacion y despues consulta
-OpenWeatherMap para mostrar temperatura e icono en el header.
-
-1. Copia `js/config.example.js` como `js/config.local.js`
-2. Pega tu clave:
-
-```js
-export const OPENWEATHER_API_KEY = "tu-clave-aqui";
-```
-
-`config.local.js` esta en `.gitignore`, asi que la clave nunca se sube al repositorio.
-Si el archivo no existe, el sitio sigue funcionando y muestra un selector de ciudades
-en lugar de la temperatura.
+OpenWeatherMap para mostrar temperatura e icono en el header con la clave configurada en `js/main.js`.
 
 Restringi tu clave por dominio en el panel de OpenWeatherMap
 (*Settings* > *API keys* > *Allowed domains*). Asi solo tu sitio puede usarla.
@@ -41,10 +30,7 @@ opcional: si no esta, el boton se oculta solo.
 index.html
 css/styles.css        5 capas: tokens, base, layout, components, utilities
 js/
-  main.js             importa e inicializa cada modulo
-  config.js           clave vacia, versionada
-  config.example.js   plantilla, versionada
-  config.local.js     tu clave real, ignorada por git
+  main.js             importa e inicializa cada modulo y contiene la configuracion
   nav.js              menu hamburguesa
   audio.js            toggle de musica
   weather.js          geolocalizacion + OpenWeatherMap
